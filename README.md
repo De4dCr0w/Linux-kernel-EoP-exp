@@ -2,7 +2,12 @@
 
 ### 简介
 
-linux-kernel-exploits
+在github项目：https://github.com/SecWiki/linux-kernel-exploits 的基础上增加了最近几年的提权漏洞Exp，漏洞相关信息的搜集在对应漏洞文件夹下的Readme.md。
+
+红队攻击时，可以通过脚本：https://github.com/mzet-/linux-exploit-suggester/blob/master/linux-exploit-suggester.sh
+评估系统可能受到哪些提权漏洞的影响，然后下载提权Exp进行测试。
+
+部分漏洞的复现环境在：https://github.com/De4dCr0w/kernel-vul-env
 
 
 ***
@@ -10,11 +15,21 @@ linux-kernel-exploits
 #### 漏洞列表
 #### #CVE　　#Description　　#Kernels  
 
+- [CVE-2020-8835](./2020/CVE-2020-8835) [> linux 5.4 ebpf]
+
+- [CVE-2019-13272](./2019/CVE-2019-13272) [Linux 4.10 < 5.1.17 PTRACE_TRACEME local root] 
+
+- [CVE-2019-18683](./2019/CVE-2019-18683) [ PoC crashing the kernel using the bug in drivers/media/platform/vivid. Turned out that this bug is exploitable. Just for fun.] 
+
+- [CVE-2019-15666](./2019/CVE-2019-15666) [CVE-2019-15666 Ubuntu / CentOS / RHEL Linux Kernel 4.4 - 4.18 privilege escalation] 
+
 - [CVE–2018–18955](./2018/CVE-2018-18955)　　[map_write() in kernel/user_namespace.c allows privilege escalation]  
 (Linux kernel 4.15.x through 4.19.x before 4.19.2)  
 
 - [CVE–2018–1000001](./2018/CVE–2018–1000001)　　[glibc]  
 (glibc <= 2.26)  
+
+- [CVE–2018–5333](./2018/CVE–2018–5333) [Local root exploit for Linux RDS rds_atomic_free_op NULL pointer dereference in the rds kernel module in the Linux kernel through 4.14.13 (CVE-2018-5333).]  
 
 - [CVE-2017-1000367](./2017/CVE-2017-1000367)　　[Sudo]
 (Sudo 1.8.6p7 - 1.8.20)  
